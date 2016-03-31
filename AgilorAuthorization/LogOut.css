@@ -1,0 +1,31 @@
+/*id*/
+#iscas {
+    /*margin-bottom: 40px;*/
+    background-color: rgb(88, 89, 89);
+    position: relative;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+}
+#banner{
+    margin-bottom: 40px;
+    background: url(./picture/denglu.png) #26c479 center bottom no-repeat;
+    position: relative;
+    height: 60px;
+}
+#main{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 500px;
+}
+
+/*class*/
+.span-blue {
+    text-align: center;
+    color: #63ad64;
+}
+html,body{
+    margin: 0;
+    padding:0
+}

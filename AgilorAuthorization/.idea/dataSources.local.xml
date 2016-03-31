@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - agilortest@localhost" uuid="a3c64056-9162-404f-93da-21bf63c6ec64">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>agilortest.*</schema-pattern>
+      <default-schemas>agilortest.*</default-schemas>
+    </data-source>
+  </component>
+</project>

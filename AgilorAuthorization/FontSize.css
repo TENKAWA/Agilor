@@ -1,0 +1,27 @@
+html {
+    font-family:"Microsoft YaHei";
+}
+.font12 {
+    font-size: 12px!important;
+}
+.font14 {
+    font-size: 14px!important;
+}
+.font15 {
+    font-size: 15px!important;
+}
+.font16 {
+    font-size: 16px!important;
+}
+.font18 {
+    font-size: 18px!important;
+}
+.font24 {
+    font-size: 24px!important;
+}
+.font36 {
+    font-size: 36px!important;
+}
+.font-thin {
+    font-weight: normal;
+}

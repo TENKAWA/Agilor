@@ -1,0 +1,203 @@
+/*id*/
+#iscas {
+    /*margin-bottom: 40px;*/
+    background-color: rgb(88, 89, 89);
+    position: relative;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+}
+#banner{
+    margin-bottom: 15px;
+    background: url(./picture/zhuce.png) #19a5e0 center bottom no-repeat;
+    position: relative;
+    height: 60px;
+}
+#main{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/*class*/
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+.link_green {
+    color: #63ad64 !important;
+}
+.link_blue {
+    color: #3498db !important;
+}
+.form-control {
+    display: block;
+    width: 20%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+}
+.btn-check {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 1.3333333;
+    outline: 0 none!important;
+    width: 140px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #3498db;
+    font-family:"Microsoft YaHei";
+}
+.btn-search {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 1.3333333;
+    outline: 0 none!important;
+    width: 60px;
+    border-radius: 0px;
+    color: #fff;
+    background-color: #3498db;
+    font-family:"Microsoft YaHei";
+}
+.btn-login:hover {
+    background: #2e79b0;
+}
+.data-table {
+    width: 100%;
+    border-style: none;
+    background-color: #fff;
+    /*margin-bottom: 20px;*/
+    text-align: left;
+}
+.data-table th, .data-table td {
+    padding: 5px;
+    line-height: 30px
+}
+.data-table thead th {
+    background-color: #eee;
+    margin: 0;
+    text-align: left;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    font-weight: 500
+}
+.data-table tbody td {
+    background-color: #fff;
+    border-bottom: 1px dotted #ddd;
+    table-layout:fixed;
+    word-break:break-all;
+    border-collapse:collapse;
+    font-weight: 400
+}
+.data-table tbody tr.evenrow td {
+    background-color: #f4f4f4;
+}
+.data-table tfoot td {
+    background-color: #fafafa;
+    text-align: right;
+    border-bottom: 1px solid #cfcfcf;
+}
+/*表格分页列表*/
+.data-table td.paging a {
+    border: 1px solid #eee;
+    color: #444;
+    margin: 4px;
+    padding: 2px 7px;
+    text-decoration: none;
+    text-align:center;
+}
+/*表格分页当前页*/
+.data-table td.paging a.current {
+    background: #eee;
+    border: 1px solid #CFCFCF;
+    color: #444;
+    font-weight: bold;
+}
+.data-table td.paging input{
+    border:1px solid #4D90BB;
+    font-family:Arial,sans-serif,Tahoma;
+    font-size:12px;
+    padding:0 5px;
+    outline: none
+}
+.data-table td.paging .search-txt{
+    height:30px;
+    /*line-height:30px;*/
+    width: 200px
+}
+.data-table td.paging .search-btn{
+    height: 32px;
+    border-left:none;
+    cursor: pointer;
+    _filter:chroma(color=#000000);
+}
+/*表格排序*/
+.data-table thead th.bg{
+    background:#eee url("./picture/bg.gif") right center no-repeat;
+    cursor: pointer
+}
+.data-table thead th.asc{
+    background: url("./picture/asc.gif") right center no-repeat;
+    cursor: pointer
+}
+.data-table thead th.desc{
+    background: url("./picture/desc.gif") right center no-repeat;
+    cursor: pointer
+}
+
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+html,body{
+    margin: 0;
+    padding:0
+}
+a:focus {
+    outline: none;
+}
+h3.head_title {
+    border-bottom: 1px solid #d5ddeb;
+    color: #1c7493;
+    display: block;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+/* 通用表格显示 */
+table, th, td {
+    font: 12px Arial,Helvetica,sans-serif,'宋体';
+    margin: 0;
+    padding: 0
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    empty-cells: show
+}

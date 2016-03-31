@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server>
+<mysql>
+    <host>localhost</host>
+    <username>root</username>
+    <dbname>agilortest</dbname>
+    <password>174509853</password>
+</mysql>
+<AuthoServer>
+    <ip>11.0.0.103</ip>
+    <port>2718</port>
+</AuthoServer>
+    <page>
+        <pagesize>6</pagesize>
+    </page>
+</server>

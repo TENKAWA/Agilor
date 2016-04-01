@@ -29,28 +29,28 @@
                 <label for="user_email">我的账号</label>
                 <div class="inps">
                     <input id="user_email" name="user_email" class="form-control" type="email"
-                           placeholder="请输入您的电子邮箱" autocomplete="off" value="">
+                           placeholder="请输入您的电子邮箱" autocomplete="off" value="tenkawa_akito@qq.com">
                 </div>
             </div>
             <div class="form-group">
                 <label for="user_password">输入密码</label>
                 <div class="inps">
                     <input id="user_password" name="user_password" class="form-control" type="password"
-                           placeholder="6-20位由数字和字母组成" autocomplete="off" value="">
+                           placeholder="6-20位由数字和字母组成" autocomplete="off" value="123123">
                 </div>
             </div>
             <div class="form-group">
                 <label for="user_password_confirm">确认密码</label>
                 <div class="inps">
                     <input id="user_password_confirm" name="user_password_confirm" class="form-control" type="password"
-                           placeholder="请再次确认您的密码" autocomplete="off" value="">
+                           placeholder="请再次确认您的密码" autocomplete="off" value="123123">
                 </div>
             </div>
             <div class="form-group">
                 <label for="user_name">我的姓名</label>
                 <div class="inps">
                     <input id="user_name" name="user_name" class="form-control" type="text"
-                           placeholder="请输入您的姓名" autocomplete="off" value="">
+                           placeholder="请输入您的姓名" autocomplete="off" value="AKITO">
                 </div>
             </div>
             <div class="form-group">
@@ -65,14 +65,14 @@
                 <label for="user_work">工作单位</label>
                 <div class="inps">
                     <input id="user_work" name="user_work" class="form-control" type="text"
-                           placeholder="请输入您的工作单位" autocomplete="off" value="">
+                           placeholder="请输入您的工作单位" autocomplete="off" value="ISCAS">
                 </div>
             </div>
             <div class="form-group">
                 <label for="user_tel">联系方式</label>
                 <div class="inps">
                     <input id="user_tel" name="user_tel" class="form-control" type="number"
-                           placeholder="请输入您的手机号码" autocomplete="off" value="">
+                           placeholder="请输入您的手机号码" autocomplete="off" value="18710023223">
                 </div>
             </div>
             <br><br>

@@ -11,11 +11,11 @@
       <table id="2" parent="1" name="user"/>
       <column id="3" parent="2" name="email">
         <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
+        <data-type>varchar(30)</data-type>
       </column>
       <column id="4" parent="2" name="password">
         <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
+        <data-type>varchar(25)</data-type>
       </column>
       <column id="5" parent="2" name="name">
         <mandatory>1</mandatory>
@@ -26,7 +26,7 @@
         <data-type>varchar(2)</data-type>
       </column>
       <column id="7" parent="2" name="work">
-        <data-type>varchar(255)</data-type>
+        <data-type>varchar(100)</data-type>
       </column>
       <column id="8" parent="2" name="telephone">
         <mandatory>1</mandatory>
@@ -42,10 +42,10 @@
         <data-type>varchar(2)</data-type>
       </column>
       <column id="11" parent="2" name="userKey">
-        <data-type>varchar(100)</data-type>
+        <data-type>varchar(40)</data-type>
       </column>
       <column id="12" parent="2" name="trialKey">
-        <data-type>varchar(100)</data-type>
+        <data-type>varchar(40)</data-type>
       </column>
       <column id="13" parent="2" name="trialDate">
         <data-type>datetime</data-type>
@@ -54,7 +54,7 @@
         <data-type>varchar(2)</data-type>
       </column>
       <column id="15" parent="2" name="reggedKey">
-        <data-type>varchar(100)</data-type>
+        <data-type>varchar(40)</data-type>
       </column>
       <column id="16" parent="2" name="reggedDate">
         <data-type>datetime</data-type>
@@ -65,6 +65,16 @@
       </column>
       <column id="18" parent="2" name="ip">
         <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="2" name="active">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="20" parent="2" name="activeTime">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="21" parent="2" name="token">
+        <data-type>varchar(50)</data-type>
       </column>
     </database-model>
   </data-source>

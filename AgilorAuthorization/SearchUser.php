@@ -149,7 +149,7 @@
     </form>
     <script type="text/javascript">
         function skip() {
-            window.location.href="AdministratorPage.php";
+            window.location.href = "AdministratorPage.php";
         }
     </script>
 </div>

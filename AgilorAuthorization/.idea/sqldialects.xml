@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/SearchUser.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SearchUserProcess.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SearchUserServer.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/active.php" dialect="MySQL" />
   </component>
 </project>

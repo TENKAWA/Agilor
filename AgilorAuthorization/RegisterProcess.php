@@ -22,6 +22,10 @@
         $regDate = date('Y-m-d H:i:s');
         $ip = $connectSQL->getIp();
         $trial = 0;
+        $active = 0;
+        $regTime = time();
+        $token = md5($userEmail.$userPassword.$regTime);
+        $tokenTime = time()+60*60*24; //过期时间为24小时后
 
         $sql = "select email from user where email = '$userEmail'"; //SQL语句
         $result = $connectSQL->execute_dql($sql);    //执行SQL语句
@@ -32,13 +36,36 @@
         }
         else    //不存在当前注册用户名称
         {
-            $sql_insert = "insert into user (email, password, name, sex, work, telephone, permission, authorization, registerDate, ip, trial)
+            $sql_insert = "insert into user (email, password, name, sex, work, telephone, permission, authorization, registerDate, ip, trial, active, activeTime, token)
                           values('$userEmail','$userPassword','$userName'
-                          , '$userSex', '$userWork', '$userTel', '$permission', '$authorization', '$regDate', '$ip', '$trial')";
+                          , '$userSex', '$userWork', '$userTel', '$permission', '$authorization', '$regDate', '$ip', '$trial', '$active', '$tokenTime', '$token')";
             $res_insert = $connectSQL->execute_dql($sql_insert);;
             //$num_insert = mysql_num_rows($res_insert);
             if($res_insert)
             {
+                include_once("smtp.class.php");
+                $smtpServer = "smtp.163.com"; //SMTP服务器
+                $smtpServerPort = 25; //SMTP服务器端口
+                $smtpUserMail = "tenkawa_akito@163.com"; //SMTP服务器的用户邮箱
+                $smtpUser = "tenkawa_akito@163.com"; //SMTP服务器的用户帐号
+                $smtpPassword = "akito19871012"; //SMTP服务器的用户密码
+                $smtpHeader = "";
+
+                $smtp = new Smtp($smtpServer, $smtpServerPort, true, $smtpUser, $smtpPassword); //这里面的一个true是表示使用身份验证,否则不使用身份验证.
+                $emailType = "HTML"; //信件类型，文本:text；网页：HTML
+                $smtpEmailTo = $userEmail;
+                $smtpEmailFrom = $smtpUserMail;
+                $emailSubject = "用户帐号激活";
+                $emailBody = "亲爱的" . $userName . "：<br>感谢您在我站注册了新帐号。<br>请点击链接激活您的帐号。<br/><a href='http://10.0.0.122/active.php?verify=" . $token . "' target='_blank'>http://10.0.0.122/active.php?verify=" . $token . "</a><br/>如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。<br/>如果此次激活请求非你本人所发，请忽略本邮件。<br/><p style='text-align:right'>-------- Agilor团队 敬上</p>";
+                $rs = $smtp->sendmail($smtpEmailTo, $smtpEmailFrom, $smtpHeader, $emailSubject, $emailBody, $emailType);
+                if ($rs == 1) {
+                    $msg = '恭喜您，注册成功！<br/>请登录到您的邮箱及时激活您的帐号！';
+                }
+                else {
+                    $msg = $rs;
+                    echo $msg;
+                }
+
                 header("location:RegisterSuccess.php");
             }
             else

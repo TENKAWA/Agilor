@@ -16,7 +16,7 @@
     $row = mysqli_fetch_array($result);
     if($row) {
         if($nowTime > $row['activeTime']) { //30min
-            echo "<script>alert('您的激活有效期已过，请登录您的帐号重新发送激活邮件！'); history.go(-1);</script>";
+            echo "<script>alert('您的激活有效期已过，请致电联系管理员！'); history.go(-1);</script>";
         }
         else {
             $email = $row['email'];
@@ -24,10 +24,10 @@
             $link = $connectSQL->execute_dql($sql);
             $affect = mysqli_affected_rows($connectSQL->conn);
             if($affect) {
-                echo "<script>alert('您已激活账号，请登录！'); window.location.href = \"AdministratorPage.php\";</script>";
                 $sql = "update user set token = '' where email = '$email'";
                 $link = $connectSQL->execute_dql($sql);
                 $affect = mysqli_affected_rows($connectSQL->conn);
+                echo "<script>window.location.href = \"RegisterSuccess.php\";</script>";
             }
             else {
                 die(0);

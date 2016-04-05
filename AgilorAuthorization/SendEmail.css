@@ -1,0 +1,65 @@
+/*id*/
+#iscas {
+    /*margin-bottom: 40px;*/
+    background-color: rgb(88, 89, 89);
+    position: relative;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+}
+#banner{
+    margin-bottom: 40px;
+    background: url(./picture/zhuce.png) #19a5e0 center bottom no-repeat;
+    position: relative;
+    height: 60px;
+}
+#main{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 500px;
+}
+
+/*class*/
+.span-blue {
+    text-align: center;
+    color: #3498db;
+}
+.link_blue {
+    color: #3498db !important;
+}
+.link-green {
+    color: #5cb85c !important;
+}
+.btn-send {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    outline: 0 none!important;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-family:"Microsoft YaHei";
+}
+.btn-green {
+    background-color: #5cb85c;
+}
+.btn-green:hover {
+    background: #459345;
+}
+
+html,body{
+    margin: 0;
+    padding:0
+}

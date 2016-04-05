@@ -115,9 +115,32 @@
                 </td>
             </tr>
             <tr>
+                <td class="td-width100">&nbsp激活用户：</td>
+                <td class="td-width400">&nbsp
+                    <input name="user_active" class="radio-control" type="radio" value="1"<?php
+                        require_once 'ConnectSQL.php';
+                        $connectSQL = new connectSQL();
+                        $email = $_SESSION['oneUser']['email'];
+                        $sql = "select active from user where email = '$email'";
+                        $result = $connectSQL->execute_dql($sql);
+                        if($row = mysqli_fetch_assoc($result)) {
+                            $_SESSION['oneUser']['active'] = $row['active'];
+                        }
+                        if($_SESSION['oneUser']['active'] == 1) {
+                            echo 'checked';
+                        }
+                    ?>>是
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input name="user_active" class="radio-control" type="radio" value="0"
+                        <?php if($_SESSION['oneUser']['active'] == 0){echo 'checked';} ?>>否
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <button id="active" type="submit" name="active" class="btn-change font18" value="active">
+                        修改
+                    </button>
+                </td>
                 <td class="td-width100">&nbsp付费用户：</td>
                 <td class="td-width400">&nbsp
-                    <input id="user_man" name="user_authorization" class="radio-control" type="radio" value="1"<?php
+                    <input name="user_authorization" class="radio-control" type="radio" value="1"<?php
                             require_once 'ConnectSQL.php';
                             $connectSQL = new connectSQL();
                             $email = $_SESSION['oneUser']['email'];
@@ -131,13 +154,15 @@
                             }
                         ?>>是
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input id="user_woman" name="user_authorization" class="radio-control" type="radio" value="0"
+                    <input name="user_authorization" class="radio-control" type="radio" value="0"
                         <?php if($_SESSION['oneUser']['authorization'] == 0){echo 'checked';} ?>>否
                     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     <button id="authorize" type="submit" name="authorize" class="btn-change font18" value="authorize">
                         修改
                     </button>
                 </td>
+            </tr>
+            <tr>
                 <td class="td-width100">&nbsp授权码：</td>
                 <td class="td-width400">&nbsp
                     <?php
